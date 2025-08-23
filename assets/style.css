@@ -1,0 +1,135 @@
+/* Custom CSS for Telugu AI Chat Assistant */
+
+/* Import Telugu font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700&display=swap');
+
+/* Global styles */
+.main {
+    padding: 1rem;
+}
+
+/* Telugu text styling */
+.telugu-text, 
+[data-testid="stChatMessage"] .stMarkdown,
+.stTextInput input,
+.stTextArea textarea {
+    font-family: 'Noto Sans Telugu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.6;
+}
+
+/* Chat message styling */
+[data-testid="stChatMessage"] {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+[data-testid="stChatMessage"][data-testid*="user"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+[data-testid="stChatMessage"][data-testid*="assistant"] {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+/* Sidebar styling */
+.css-1d391kg {
+    background: linear-gradient(180deg, #2196F3 0%, #21CBF3 100%);
+}
+
+/* Button styling */
+.stButton > button {
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Title styling */
+h1, h2, h3 {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+/* News card styling */
+.news-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3498db;
+}
+
+/* Voice button styling */
+.voice-button {
+    background: linear-gradient(45deg, #FF416C, #FF4B2B);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.voice-button:hover {
+    transform: scale(1.1);
+}
+
+/* Audio player styling */
+audio {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Loading animation */
+.stSpinner {
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main {
+        padding: 0.5rem;
+    }
+    
+    [data-testid="stChatMessage"] {
+        padding: 0.8rem;
+    }
+    
+    .telugu-text {
+        font-size: 14px !important;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #764ba2, #667eea);
+}

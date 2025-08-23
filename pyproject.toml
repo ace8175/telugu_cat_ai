@@ -1,0 +1,95 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telugu-ai-chat"
+version = "1.0.0"
+description = "A modern AI-powered chat assistant that supports Telugu language with voice capabilities and news summarization"
+readme = "README.md"
+requires-python = ">=3.8.1"
+license = {text = "AGPLv3"}
+authors = [
+    {name = "Telugu AI Team", email = "support@teluguai.com"}
+]
+keywords = ["telugu", "ai", "chat", "voice", "news", "streamlit"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: AGPLv3 License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Communications :: Chat",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+
+dependencies = [
+    "streamlit>=1.28.0",
+    "supabase>=1.0.4",
+    "requests>=2.31.0",
+    "gtts>=2.3.2",
+    "beautifulsoup4>=4.12.0",
+    "feedparser>=6.0.10",
+    "python-dotenv>=1.0.0",
+    "bcrypt>=4.0.1",
+    "langdetect>=1.0.9",
+    "python-dateutil>=2.8.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "isort>=5.12.0",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/telugu-ai-chat"
+Documentation = "https://github.com/your-username/telugu-ai-chat#readme"
+Issues = "https://github.com/your-username/telugu-ai-chat/issues"
+Source = "https://github.com/your-username/telugu-ai-chat"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = {find = {where = ["."], include = ["*"], exclude = ["tests", "tests.*", "venv", "venv.*", ".github", ".github.*"]}}
+
+# Optional: Streamlit specific configuration
+[tool.streamlit]
+server.port = 8501
+server.address = "0.0.0.0"
+browser.serverAddress = "localhost"
+browser.gatherUsageStats = false
+
+# Optional: Black code formatter configuration
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.nox
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | venv
+)/
+'''
+
+# Optional: Flake8 configuration
+[tool.flake8]
+max-line-length = 88
+extend-ignore = "E203"
+exclude = [".git", "__pycache__", "venv", "dist", "build"]
