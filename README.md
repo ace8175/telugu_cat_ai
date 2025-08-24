@@ -1,6 +1,8 @@
 # Telugu AI Chat Assistant 🤖
 
 A modern AI-powered chat assistant that supports Telugu language with voice capabilities and news summarization.
+
+
 Try this app out at: [Telugu AI Assistant](https://telugu-chat-ai.streamlit.app)
 
 ## Features
